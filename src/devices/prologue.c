@@ -37,12 +37,9 @@ static int prologue_callback(bitbuffer_t *bitbuffer) {
         temp2 = (int16_t)((uint16_t)(bb[1][2] << 8) | (bb[1][3]&0xF0));
         temp2 = temp2 >> 4;
 	
-	time_t time_now;
-	char time_str[LOCAL_TIME_BUFLEN];
-	time(&time_now);
-	local_time_str(time_now, time_str);
+        time_t time_now = time(NULL);
 
-	fprintf(stdout, "%s,", time_str);
+	fprintf(stdout, "%ju,", time_now);
 	fprintf(stdout, "%d,",(bb[1][1]&0x03)+1);
 	fprintf(stdout, "%d,",(bb[1][0]&0xF0)>>4);
 	rid = ((bb[1][0]&0x0F)<<4)|(bb[1][1]&0xF0)>>4;
