@@ -59,6 +59,6 @@ if __name__ == '__main__':
             data = line.split(',')
             # print data
             cursor.execute("INSERT INTO temperature \
-                            (datetime, channel, sid, rid, temperature, humidity, low_battery, button_pressed) \
+                            (unixtime, channel, sid, rid, temperature, humidity, low_battery, button_pressed) \
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",data)
             db.commit()
