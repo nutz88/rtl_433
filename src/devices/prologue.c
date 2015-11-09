@@ -39,7 +39,7 @@ static int prologue_callback(bitbuffer_t *bitbuffer) {
 	
         time_t time_now = time(NULL);
 
-	fprintf(stdout, "%ju,", time_now);
+	fprintf(stdout, "%ju,", (uintmax_t)time_now);
 	fprintf(stdout, "%d,",(bb[1][1]&0x03)+1);
 	fprintf(stdout, "%d,",(bb[1][0]&0xF0)>>4);
 	rid = ((bb[1][0]&0x0F)<<4)|(bb[1][1]&0xF0)>>4;
