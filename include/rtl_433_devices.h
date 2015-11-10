@@ -39,8 +39,10 @@
 		DECL(wt450) \
 		DECL(lacrossews) \
 		DECL(esperanza_ews) \
-		DECL(efergy_e2_classic)
-
+		DECL(efergy_e2_classic) \
+		DECL(kw9015b) \
+		DECL(generic_temperature_sensor) \
+		DECL(acurite_txr)
 
 typedef struct {
 	char name[256];

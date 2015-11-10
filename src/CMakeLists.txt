@@ -56,6 +56,8 @@ add_executable(rtl_433
 	devices/lacrossews.c
 	devices/esperanza_ews.c
 	devices/efergy_e2_classic.c
+	devices/inovalley-kw9015b.c
+	devices/generic_temperature_sensor.c
 )
 
 target_link_libraries(rtl_433
